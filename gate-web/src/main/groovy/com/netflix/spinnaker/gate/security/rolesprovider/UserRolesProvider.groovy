@@ -21,17 +21,17 @@ public interface UserRolesProvider {
   /**
    * Load the roles assigned to the {@link com.netflix.spinnaker.security.User User}.
    *
-   * @param userId identify a user. Can be email or username.
-   * @return Roles assigned to the {@link com.netflix.spinnaker.security.User User} with the given userEmail.
+   * @param userName identify a user. Can be email or username.
+   * @return Roles assigned to the {@link com.netflix.spinnaker.security.User User} with the given userName.
    */
-  public Collection<String> loadRoles(String userId)
+  public Collection<String> loadRoles(String userName)
 
   /**
-   * Load the roles assigned to each {@link com.netflix.spinnaker.security.User User's} email in userEmails.
+   * Load the roles assigned to each {@link com.netflix.spinnaker.security.User User's} userName in userNames.
    *
-   * @param userIds
-   * @return Map whose keys are the {@link com.netflix.spinnaker.security.User User's} email and values are their
+   * @param userNames
+   * @return Map whose keys are the {@link com.netflix.spinnaker.security.User User's} userName and values are their
    * assigned roles.
    */
-  public Map<String, Collection<String>> multiLoadRoles(Collection<String> userIds)
+  public Map<String, Collection<String>> multiLoadRoles(Collection<String> userNames)
 }
